@@ -26,5 +26,14 @@ window.onload = function() {
   let randomsuit = Math.floor(Math.random() * suit.length);
   let randomnumber = Math.floor(Math.random() * number.length);
 
+  if (suit[randomsuit].length <= 1) {
+    document.getElementById("topsuit").style.color = "red";
+    document.getElementById("bottomsuit").style.color = "red";
+  }
+
+  document.getElementById("topsuit").innerHTML = suit[randomsuit];
+  document.getElementById("bottomsuit").innerHTML = suit[randomsuit];
+  document.getElementById("number").innerHTML = number[randomnumber];
+
   console.log(suit[randomsuit] + number[randomnumber]);
 };
